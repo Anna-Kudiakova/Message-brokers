@@ -1,0 +1,21 @@
+#spinning up container
+docker-compose up -d
+#check if containers are running
+docker-compose ps 
+
+#get inside docker container
+docker exec -it <kafka_conatiner_id> sh
+
+#move to the folder where all the executives are located
+cd /your_classpath
+cd /bin
+
+#create topic
+kafka-topics --create --bootstrap-server kafka:9092 --replication-factor 1 --partitions 1 --topic test-topic
+
+#create producer
+kafka-console-producer --topic quickstart --bootstrap-server kafka:9092
+#create consumer
+kafka-console-consumer --topic quickstart --from-beginning --bootstrap-server kafka:9092
+
+
