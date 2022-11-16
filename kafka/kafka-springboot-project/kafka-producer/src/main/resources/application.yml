@@ -1,0 +1,8 @@
+server:
+  port: 8081
+topic:
+  message:
+    name: message-topic
+  filtered:
+    name: filtered-topic
+
