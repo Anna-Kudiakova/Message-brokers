@@ -1,0 +1,8 @@
+topic:
+  message:
+    name: message-topic
+server:
+  port: 8081
+spring:
+  redis:
+    port: 6379
